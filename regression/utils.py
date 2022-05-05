@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 def plot_regression_results(ax, y_true, y_pred, model_name, scores, bodypart):
     """Scatter plot of the predicted vs true targets."""
     ax.plot([y_true.min(), y_true.max()],
-            [y_true.min(), y_true.max()],
-            '--r', linewidth=2)
+            [y_true.min(), y_true.max()], '--r', linewidth=2)
     ax.scatter(y_true, y_pred, alpha=0.5)
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
@@ -17,8 +16,8 @@ def plot_regression_results(ax, y_true, y_pred, model_name, scores, bodypart):
     ax.set_ylim([y_true.min(), y_true.max()])
     ax.set_xlabel('Measured')
     ax.set_ylabel('Predicted')
-    extra = plt.Rectangle((0, 0), 0, 0, fc="w", fill=False,
-                          edgecolor='none', linewidth=0)
+    extra = plt.Rectangle((0, 0), 0, 0, fc="w",
+                          fill=False, edgecolor='none', linewidth=0)
     ax.legend([extra], [scores], loc='upper left')
     title = model_name + '\n Target: {}'.format(bodypart)
     ax.set_title(title)
