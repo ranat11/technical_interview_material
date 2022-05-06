@@ -16,11 +16,11 @@ When being passed to the candidate, only this directory should be passed, and no
    - The application code use the methods in the library by importing them.
    - If you used some libraries (Actually I am sure that you will), you need to list all the used libraries and their versions as text file in some formats, so that Arithmer can run the code:
      - `requirements.txt` #cmd: pipreqs
-     - `poetry.lock` # cmd: poetry update
+     - `poetry.lock` #cmd: poetry update // poetry add dependency_name
      - Some other format which are well-used
    - [Bonus] Following [PEP8](https://www.python.org/dev/peps/pep-0008/) is recommended.
    - [Bonus] Adding [docstring](https://realpython.com/documenting-python-code/)/[type annotation](https://realpython.com/python-type-checking/) is recommended in implementing methods in the library.
-4. [Bonus] Write unittest in `tests/` for the library (`regression/`).
+4. [Bonus] Write unittest in `tests/` for the library (`regression/`). #cmd:python -m pytest
 
 In 3. and 4., make sure that you make git commits with proper granuality.
 

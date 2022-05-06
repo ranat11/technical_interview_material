@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 
-def plot_regression_results(ax, y_true, y_pred, model_name, scores, bodypart):
+def plot_regression_results(ax, y_true: np.ndarray, y_pred: np.ndarray, model_name: str, scores: float, bodypart: str):
     """Scatter plot of the predicted vs true targets."""
     ax.plot([y_true.min(), y_true.max()],
             [y_true.min(), y_true.max()], '--r', linewidth=2)

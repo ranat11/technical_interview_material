@@ -77,11 +77,11 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--train", help="train model with linear regression", action=argparse.BooleanOptionalAction)
+        "--train", help="train model with linear regression", default=True, action=argparse.BooleanOptionalAction)
     parser.add_argument(
         "--file-name", help="file name for saving and loading", default="model", type=str)
     parser.add_argument(
-        "--render", help="plot graph between prediction and real target", action=argparse.BooleanOptionalAction)
+        "--render", help="plot graph between prediction and real target", default=True, action=argparse.BooleanOptionalAction)
 
     args = parser.parse_args()
     main(args)
